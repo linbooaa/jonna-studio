@@ -9,14 +9,14 @@
 - 地址、交通、報名資訊
 
 ## 本機預覽
-直接用瀏覽器開啟 `index.html` 即可，或執行：
+直接用瀏覽器開啟 `joann-studio.html` 即可，或執行：
 
 ```
 python -m http.server 8000
 ```
 
-再開啟 http://localhost:8000
+再開啟 http://localhost:8000/joann-studio.html
 
 ## 更新內容
-- 文字與課表：編輯 `index.html`
+- 文字與課表：編輯 `joann-studio.html`
 - 照片：替換 `images/` 資料夾內對應檔案（保持相同檔名）
