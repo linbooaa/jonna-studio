@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Joann Studio｜台北舞蹈工作室</title>
 <meta name="description" content="Joann Studio 是台北市中正區的舞蹈工作室，提供舞蹈啦啦隊、鋼管、柔軟度、皮拉提斯、芭蕾等課程。近古亭站、台電大樓站，步行6分鐘。" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Joann Studio" />
+<meta property="og:title" content="Joann Studio｜台北舞蹈工作室" />
+<meta property="og:description" content="台北市中正區舞蹈工作室，提供舞蹈啦啦隊、鋼管、柔軟度、皮拉提斯、芭蕾等課程。近古亭站、台電大樓站，步行6分鐘。" />
+<meta property="og:url" content="https://linbooaa.github.io/jonna-studio/joann-studio.html" />
+<meta property="og:image" content="https://linbooaa.github.io/jonna-studio/images/hero.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
 <style>
   :root{
     --bg:#F1E9DA;
@@ -284,6 +291,109 @@
     border-radius:50%;
   }
 
+  /* ---------- PROMO ---------- */
+  .promo{
+    padding:clamp(56px,9vw,100px) 0;
+    background:var(--bg);
+  }
+  .promo__head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    flex-wrap:wrap;
+    margin-bottom:clamp(32px,5vw,52px);
+  }
+  .promo__head h2{font-size:clamp(1.7rem,1.4rem + 1.3vw,2.5rem);}
+  .promo__badge{
+    font-size:0.82rem;
+    color:var(--ink-soft);
+    max-width:32ch;
+    text-align:right;
+  }
+  .promo__grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .promo__card{
+    background:var(--card);
+    padding:clamp(24px,3vw,36px);
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+  .promo__tag{
+    display:inline-block;
+    align-self:flex-start;
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    padding:4px 12px;
+    border-radius:999px;
+    background:var(--accent);
+    color:#fff8ec;
+    font-weight:600;
+  }
+  .promo__card h3{font-size:1.25rem; margin-top:10px;}
+  .promo__price{
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    margin-top:10px;
+    font-family:Georgia,serif;
+    font-size:1.9rem;
+    color:var(--accent);
+  }
+  .promo__price span{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:0.86rem;
+    color:var(--ink-soft);
+  }
+  .promo__deadline{
+    margin-top:10px;
+    font-size:0.82rem;
+    color:var(--ink-soft);
+  }
+  .promo__extra{
+    margin-top:1px;
+    background:var(--bg-alt);
+    border:1px solid var(--line);
+    border-top:none;
+    padding:clamp(20px,3vw,28px) clamp(24px,3vw,36px);
+  }
+  .promo__extra > strong{
+    display:block;
+    font-family:Georgia,serif;
+    color:var(--accent);
+    font-weight:400;
+    font-size:1rem;
+    margin-bottom:14px;
+  }
+  .promo__addons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:24px 32px;
+  }
+  .promo__addon{
+    display:flex;
+    align-items:center;
+    gap:16px;
+  }
+  .promo__addon img{
+    width:120px; height:120px;
+    object-fit:cover;
+    border-radius:14px;
+    border:1px solid var(--line);
+    background:var(--card);
+    box-shadow:var(--shadow);
+  }
+  .promo__addon-name{font-size:1.05rem; color:var(--ink);}
+  .promo__addon-price{font-size:0.92rem; color:var(--ink-soft); margin-top:4px;}
+  .promo__extra-heading{margin-top:24px;}
+  .promo__cta{margin-top:28px; text-align:center;}
+
   /* ---------- FACILITY BAND ---------- */
   .facility{
     position:relative;
@@ -318,6 +428,65 @@
     color:var(--stage-ink);
     opacity:0.88;
     font-size:0.98rem;
+  }
+
+  /* ---------- TEACHER ---------- */
+  .teacher{
+    padding:clamp(64px,10vw,120px) 0;
+    background:var(--bg-alt);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .teacher__grid{
+    display:grid;
+    grid-template-columns:0.8fr 1.2fr;
+    gap:clamp(36px,6vw,72px);
+    align-items:center;
+  }
+  .teacher__portrait{
+    justify-self:center;
+    width:min(280px,70vw);
+  }
+  .teacher__portrait img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:50%;
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+  }
+  .teacher h2{font-size:clamp(1.7rem,1.4rem + 1.3vw,2.5rem);}
+  .teacher__title{
+    margin-top:6px;
+    font-size:0.92rem;
+    letter-spacing:0.06em;
+    color:var(--accent);
+  }
+  .teacher p{
+    margin-top:18px;
+    color:var(--ink-soft);
+    font-size:1rem;
+    max-width:56ch;
+  }
+  .teacher__badges{
+    list-style:none; margin:20px 0 0; padding:0;
+    display:flex; flex-wrap:wrap; gap:10px;
+  }
+  .teacher__badges li{
+    font-size:0.8rem;
+    padding:6px 14px;
+    border-radius:999px;
+    background:var(--card);
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+  }
+  .teacher__ig{
+    display:inline-block;
+    margin-top:20px;
+    font-size:0.9rem;
+    color:var(--accent);
+    text-decoration:none;
+    border-bottom:1px solid var(--accent-soft);
   }
 
   /* ---------- SCHEDULE ---------- */
@@ -405,6 +574,42 @@
     font-weight:400;
   }
 
+  /* ---------- FAQ ---------- */
+  .faq{
+    padding:clamp(60px,9vw,104px) 0;
+    background:var(--bg);
+  }
+  .faq__head{margin-bottom:clamp(28px,4vw,44px);}
+  .faq__head h2{font-size:clamp(1.7rem,1.4rem + 1.3vw,2.5rem);}
+  .faq__list{
+    display:flex;
+    flex-direction:column;
+    border-top:1px solid var(--line);
+  }
+  .faq__item{
+    padding:22px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .faq__q{
+    display:flex;
+    gap:10px;
+    font-family:Georgia,serif;
+    font-size:1.05rem;
+    color:var(--ink);
+  }
+  .faq__q::before{
+    content:"Q";
+    color:var(--accent);
+    font-weight:600;
+  }
+  .faq__a{
+    margin-top:10px;
+    padding-left:24px;
+    font-size:0.94rem;
+    color:var(--ink-soft);
+    max-width:62ch;
+  }
+
   /* ---------- INFO / FOOTER ---------- */
   .info{
     padding:clamp(60px,9vw,104px) 0 clamp(40px,6vw,64px);
@@ -468,6 +673,12 @@
     .about p{margin-inline:auto;}
     .about__portrait{order:-1;}
     .pillars__grid{grid-template-columns:1fr;}
+    .promo__grid{grid-template-columns:1fr;}
+    .promo__head{flex-direction:column; align-items:flex-start;}
+    .promo__badge{text-align:left;}
+    .teacher__grid{grid-template-columns:1fr; text-align:center;}
+    .teacher p{margin-inline:auto;}
+    .teacher__badges{justify-content:center;}
     .info__grid{grid-template-columns:1fr; gap:32px;}
     .schedule__head{flex-direction:column; align-items:flex-start;}
     .schedule__note{text-align:left;}
@@ -551,6 +762,64 @@
   </div>
 </section>
 
+<section class="promo">
+  <div class="wrap">
+    <div class="promo__head">
+      <div>
+        <div class="label">Opening Offer</div>
+        <h2>開幕優惠方案</h2>
+      </div>
+      <div class="promo__badge">限個人／雙人使用，詳細規則請洽官方 LINE</div>
+    </div>
+    <div class="promo__grid">
+      <div class="promo__card">
+        <span class="promo__tag">方案一</span>
+        <h3>小孩才做選擇</h3>
+        <div class="promo__price">$5,000 <span>地面 5 堂＋空中 5 堂</span></div>
+        <div class="promo__deadline">限個人使用至 2027/7/31</div>
+      </div>
+      <div class="promo__card">
+        <span class="promo__tag">方案二</span>
+        <h3>單人上飽飽，雙人剛剛好</h3>
+        <div class="promo__price">$12,000 <span>地面 30 堂・平均 $400</span></div>
+        <div class="promo__price">$16,800 <span>空中 30 堂・平均 $560</span></div>
+        <div class="promo__deadline">最多雙人共享使用至 2027/7/31</div>
+      </div>
+    </div>
+    <div class="promo__extra">
+      <strong>加購</strong>
+      <div class="promo__addons">
+        <div class="promo__addon">
+          <img src="images/addon-spray.jpg" alt="燥飛機噴霧產品照" />
+          <div>
+            <div class="promo__addon-name">燥飛機</div>
+            <div class="promo__addon-price">$550</div>
+          </div>
+        </div>
+        <div class="promo__addon">
+          <img src="images/addon-cream.jpg" alt="泰迪卡卡乳霜產品照" />
+          <div>
+            <div class="promo__addon-name">泰迪卡卡</div>
+            <div class="promo__addon-price">$450</div>
+          </div>
+        </div>
+      </div>
+      <strong class="promo__extra-heading">加贈</strong>
+      <div class="promo__addons">
+        <div class="promo__addon">
+          <img src="images/promo-socks.jpg" alt="訂製襪子產品照，一黑一白兩雙" />
+          <div>
+            <div class="promo__addon-name">訂製襪子一組</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="promo__cta">
+      <a class="btn" href="https://lin.ee/NjiyFML" target="_blank" rel="noopener">加入官方 LINE 洽詢開幕優惠</a>
+    </div>
+  </div>
+</section>
+
 <section class="facility">
   <img class="facility__img" src="images/room.jpg" alt="教室內部空間，中央立著鋼管，地上鋪著瑜伽墊，前方有鏡牆與布簾" />
   <div class="facility__scrim"></div>
@@ -558,6 +827,27 @@
     <div class="label">The Studio</div>
     <h2>鏡牆、鋼管、瑜伽墊，一堂課的準備都已就位。</h2>
     <p>教室位於台北市中正區晉江街112巷2弄8號，近古亭捷運站2號出口、台電大樓站4號出口，步行約6分鐘。</p>
+  </div>
+</section>
+
+<section class="teacher">
+  <div class="wrap teacher__grid">
+    <div class="teacher__portrait">
+      <img src="images/teacher-joann.jpg" alt="Joann Studio 主理教練高詠蓁（Joann）大頭照" />
+    </div>
+    <div>
+      <div class="label">Meet The Coach</div>
+      <h2>高詠蓁 Joann</h2>
+      <div class="teacher__title">創辦人・主理教練</div>
+      <p>輔仁大學體育學系碩士在職專班，主修舞蹈。2019、2021 年世界啦啦隊錦標賽國家代表隊彩球團體組選手，現任新北市蘆洲國中、南山中學、漳和國中啦啦舞蹈社團指導教練，同時擔任中華民國競技啦啦隊協會技術教練，累積多年賽場與教學經驗。</p>
+      <ul class="teacher__badges">
+        <li>世界啦啦隊錦標賽 國手</li>
+        <li>啦啦舞蹈 B 級教練</li>
+        <li>啦啦舞蹈 C 級裁判</li>
+        <li>X-Pert 旋轉鋼管國際師資</li>
+      </ul>
+      <a class="teacher__ig" href="https://instagram.com/joannkao1008" target="_blank" rel="noopener">@joannkao1008</a>
+    </div>
   </div>
 </section>
 
@@ -631,6 +921,37 @@
   </div>
 </section>
 
+<section class="faq">
+  <div class="wrap">
+    <div class="faq__head">
+      <div class="label">FAQ</div>
+      <h2>常見問題</h2>
+    </div>
+    <div class="faq__list">
+      <div class="faq__item">
+        <div class="faq__q">完全沒有舞蹈或運動基礎，可以報名嗎？</div>
+        <p class="faq__a">可以。Joann Studio 強調零基礎友善、溫馨小班制，老師會依照每位學員狀況調整進度，不需要任何舞蹈或運動經驗就能開始。</p>
+      </div>
+      <div class="faq__item">
+        <div class="faq__q">鋼管課需要準備什麼服裝？</div>
+        <p class="faq__a">建議穿著短褲、背心等貼身服裝，避免長褲或太滑的布料影響抓握力；地面課程（柔軟度、皮拉提斯、成人芭蕾等）著舒適運動服即可。</p>
+      </div>
+      <div class="faq__item">
+        <div class="faq__q">開課人數怎麼計算？</div>
+        <p class="faq__a">鋼管、地面課程為 2 人開課、5 人滿班；兒童課程為 3 人開課、7 人滿班，實際是否開班會依報名人數而定，請留意課表公告。</p>
+      </div>
+      <div class="faq__item">
+        <div class="faq__q">可以請假或臨時取消嗎？</div>
+        <p class="faq__a">請最晚於課程前一晚 21:00 前告知取消，逾時恕不予退課，詳細規則請以官方 LINE 公告為準。</p>
+      </div>
+      <div class="faq__item">
+        <div class="faq__q">怎麼報名或諮詢課程？</div>
+        <p class="faq__a">私訊官方 LINE（lin.ee/NjiyFML）即可完成課程諮詢與報名，也能詢問開幕優惠方案的詳細內容。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="info">
   <div class="wrap">
     <div class="info__grid">
@@ -638,6 +959,7 @@
         <h3>地址</h3>
         <p>台北市中正區晉江街112巷2弄8號</p>
         <p>近古亭站2號出口／台電大樓站4號出口，步行約6分鐘</p>
+        <p><a href="https://www.google.com/maps/dir/?api=1&destination=台北市中正區晉江街112巷2弄8號" target="_blank" rel="noopener">在 Google Map 開啟導航</a></p>
       </div>
       <div class="info__block">
         <h3>報名與諮詢</h3>
