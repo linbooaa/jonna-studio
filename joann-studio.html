@@ -12,6 +12,7 @@
 <meta property="og:url" content="https://linbooaa.github.io/jonna-studio/joann-studio.html" />
 <meta property="og:image" content="https://linbooaa.github.io/jonna-studio/images/hero.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
+<noscript><style>.reveal{opacity:1!important; transform:none!important;}</style></noscript>
 <style>
   :root{
     --bg:#F1E9DA;
@@ -126,6 +127,20 @@
   }
   .nav__links a:hover{color:var(--accent); border-color:var(--accent-soft);}
   .nav__links a.active{color:var(--accent); border-color:var(--accent-soft); font-weight:600;}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.is-visible{
+    opacity:1;
+    transform:translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+  }
 
   /* ---------- HERO ---------- */
   .hero{
@@ -288,13 +303,14 @@
   .pillars__grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
+    gap:clamp(16px,2.5vw,24px);
   }
   .pillar{
     background:var(--card);
     padding:clamp(24px,3vw,36px);
+    border-radius:16px;
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
   }
   .pillar__num{
     font-family:Georgia,serif;
@@ -357,9 +373,7 @@
   .promo__grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
+    gap:clamp(16px,2.5vw,24px);
   }
   .promo__card{
     background:var(--card);
@@ -367,6 +381,9 @@
     display:flex;
     flex-direction:column;
     gap:4px;
+    border-radius:16px;
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
   }
   .promo__tag{
     display:inline-block;
@@ -400,10 +417,10 @@
     color:var(--ink-soft);
   }
   .promo__extra{
-    margin-top:1px;
+    margin-top:clamp(16px,2.5vw,24px);
     background:var(--bg-alt);
     border:1px solid var(--line);
-    border-top:none;
+    border-radius:16px;
     padding:clamp(20px,3vw,28px) clamp(24px,3vw,36px);
   }
   .promo__extra > strong{
@@ -436,6 +453,161 @@
   .promo__addon-price{font-size:0.92rem; color:var(--ink-soft); margin-top:4px;}
   .promo__extra-heading{margin-top:24px;}
   .promo__cta{margin-top:28px; text-align:center;}
+
+  /* ---------- PRICING ---------- */
+  .pricing{
+    padding:clamp(56px,9vw,100px) 0;
+    background:var(--bg-alt);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .pricing__head{margin-bottom:clamp(32px,5vw,52px);}
+  .pricing__head h2{font-size:clamp(1.7rem,1.4rem + 1.3vw,2.5rem);}
+  .pricing__note{
+    margin-top:8px;
+    font-size:0.9rem;
+    color:var(--ink-soft);
+  }
+  .pricing__grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:clamp(16px,2.5vw,24px);
+  }
+  .pricing__card{
+    background:var(--card);
+    padding:clamp(24px,3vw,36px);
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    border-radius:16px;
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+  }
+  .pricing__card h3{font-size:1.3rem;}
+  .pricing__card .pillar__en{
+    display:block;
+    font-size:0.7rem;
+    letter-spacing:0.24em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+  }
+  .pricing__trial{
+    font-size:0.86rem;
+    color:var(--accent);
+    font-weight:600;
+  }
+  .pricing__rows{
+    list-style:none; margin:12px 0 0; padding:0;
+    display:flex; flex-direction:column; gap:6px;
+  }
+  .pricing__rows li{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    font-size:0.9rem;
+    color:var(--ink-soft);
+  }
+  .pricing__rows b{color:var(--ink); font-weight:600;}
+  .pricing__extra{
+    margin-top:clamp(16px,2.5vw,24px);
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:20px clamp(24px,3vw,36px);
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 32px;
+    align-items:baseline;
+    font-size:0.9rem;
+  }
+  .pricing__extra strong{
+    font-family:Georgia,serif;
+    color:var(--accent);
+    font-weight:400;
+  }
+  .pricing__extra span{color:var(--ink-soft);}
+  .pricing__terms{
+    margin-top:16px;
+    font-size:0.82rem;
+    color:var(--ink-soft);
+    line-height:1.8;
+  }
+
+  /* ---------- GALLERY ---------- */
+  .gallery{
+    padding:clamp(56px,9vw,100px) 0;
+    background:var(--bg);
+  }
+  .gallery__head{margin-bottom:clamp(28px,4vw,44px);}
+  .gallery__head h2{font-size:clamp(1.7rem,1.4rem + 1.3vw,2.5rem);}
+  .gallery__grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+  }
+  .gallery__item{
+    display:block;
+    padding:0;
+    border:none;
+    background:none;
+    cursor:pointer;
+    border-radius:6px;
+    overflow:hidden;
+  }
+  .gallery__item img{
+    width:100%;
+    height:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    border-radius:6px;
+    display:block;
+    transition:transform 0.3s ease;
+  }
+  .gallery__item:hover img{transform:scale(1.04);}
+  .gallery__item:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+  .gallery__item:first-child{grid-row:span 2;}
+  .gallery__item:first-child img{aspect-ratio:4/9;}
+  @media (prefers-reduced-motion: reduce){
+    .gallery__item:hover img{transform:none;}
+  }
+
+  /* ---------- LIGHTBOX ---------- */
+  .lightbox{
+    position:fixed;
+    inset:0;
+    z-index:1000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:clamp(16px,4vw,40px);
+    background:rgba(12,10,7,0.9);
+  }
+  .lightbox.is-open{display:flex;}
+  .lightbox__img{
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    border-radius:8px;
+    box-shadow:0 20px 60px -20px rgba(0,0,0,0.6);
+  }
+  .lightbox__close{
+    position:absolute;
+    top:clamp(12px,3vw,28px);
+    right:clamp(12px,3vw,28px);
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,0.35);
+    background:rgba(255,255,255,0.08);
+    color:#fff;
+    font-size:1.4rem;
+    line-height:1;
+    cursor:pointer;
+  }
+  .lightbox__close:hover{background:rgba(255,255,255,0.18);}
 
   /* ---------- FACILITY BAND ---------- */
   .facility{
@@ -557,16 +729,16 @@
   .schedule__grid{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(190px,1fr));
-    gap:1px;
-    background:var(--stage-line);
-    border:1px solid var(--stage-line);
+    gap:14px;
   }
   .day{
-    background:rgba(255,255,255,0.03);
+    background:rgba(255,255,255,0.04);
     padding:22px 20px;
     display:flex;
     flex-direction:column;
     gap:14px;
+    border-radius:14px;
+    border:1px solid var(--stage-line);
   }
   .day__name{
     font-family:Georgia,serif;
@@ -600,10 +772,10 @@
     font-variant-numeric:tabular-nums;
   }
   .schedule__special{
-    margin-top:1px;
+    margin-top:14px;
     background:rgba(214,168,90,0.1);
     border:1px solid var(--stage-line);
-    border-top:none;
+    border-radius:14px;
     padding:18px 20px;
     display:flex;
     flex-wrap:wrap;
@@ -722,6 +894,10 @@
     .teacher__grid{grid-template-columns:1fr; text-align:center;}
     .teacher p{margin-inline:auto;}
     .teacher__badges{justify-content:center;}
+    .pricing__grid{grid-template-columns:1fr;}
+    .gallery__grid{grid-template-columns:repeat(2,1fr);}
+    .gallery__item:first-child{grid-row:span 1;}
+    .gallery__item:first-child img{aspect-ratio:4/5;}
     .info__grid{grid-template-columns:1fr; gap:32px;}
     .schedule__head{flex-direction:column; align-items:flex-start;}
     .schedule__note{text-align:left;}
@@ -735,6 +911,7 @@
   <div class="nav__links">
     <a href="#courses">課程</a>
     <a href="#promo">優惠</a>
+    <a href="#pricing">價目</a>
     <a href="#teacher">師資</a>
     <a href="#schedule">課表</a>
     <a href="#faq">FAQ</a>
@@ -757,7 +934,7 @@
   </div>
 </section>
 
-<section class="about">
+<section class="about reveal">
   <div class="wrap about__grid">
     <div>
       <div class="label">About Joann Studio</div>
@@ -773,7 +950,7 @@
   </div>
 </section>
 
-<section class="pillars" id="courses">
+<section class="pillars reveal" id="courses">
   <div class="wrap">
     <div class="pillars__head">
       <h2>課程規劃</h2>
@@ -817,7 +994,7 @@
   </div>
 </section>
 
-<section class="promo" id="promo">
+<section class="promo reveal" id="promo">
   <div class="wrap">
     <div class="promo__head">
       <div>
@@ -875,7 +1052,59 @@
   </div>
 </section>
 
-<section class="facility">
+<section class="pricing reveal" id="pricing">
+  <div class="wrap">
+    <div class="pricing__head">
+      <div class="label">Regular Pricing</div>
+      <h2>常態課程價目表</h2>
+      <div class="pricing__note">開幕優惠期間結束後，適用以下常態課程定價。</div>
+    </div>
+    <div class="pricing__grid">
+      <div class="pricing__card">
+        <span class="pillar__en">Pole・2 人開課</span>
+        <h3>空中課程</h3>
+        <div class="pricing__trial">體驗 $550</div>
+        <ul class="pricing__rows">
+          <li><span>單堂</span><b>$700</b></li>
+          <li><span>5 堂（9 折）</span><b>$630</b></li>
+          <li><span>10 堂（85 折）</span><b>$595</b></li>
+        </ul>
+      </div>
+      <div class="pricing__card">
+        <span class="pillar__en">Movement・2 人開課</span>
+        <h3>地面課程</h3>
+        <div class="pricing__trial">體驗 $400</div>
+        <ul class="pricing__rows">
+          <li><span>單堂</span><b>$500</b></li>
+          <li><span>5 堂（9 折）</span><b>$450</b></li>
+          <li><span>10 堂（85 折）</span><b>$425</b></li>
+        </ul>
+      </div>
+      <div class="pricing__card">
+        <span class="pillar__en">Cheer・3 人開課</span>
+        <h3>舞蹈啦啦隊</h3>
+        <div class="pricing__trial">體驗 $300</div>
+        <ul class="pricing__rows">
+          <li><span>單堂</span><b>$400</b></li>
+          <li><span>啦啦期班（1 個月，9 折）</span><b>$360</b></li>
+        </ul>
+        <div class="pricing__note">＊比賽期班另計＊</div>
+      </div>
+    </div>
+    <div class="pricing__extra">
+      <strong>私人課程</strong>
+      <span>（空中／地面／啦啦隊）</span>
+      <span>一對一 $1,500</span>
+      <span>一對二 $2,000</span>
+      <span>三人以上 $3,000</span>
+    </div>
+    <div class="pricing__terms">
+      每堂課皆為 55 分鐘。課卡期限：單堂一個月／5 堂三個月／10 堂五個月，過期則需再購買 5 堂以上課卡方可使用。
+    </div>
+  </div>
+</section>
+
+<section class="facility reveal">
   <img class="facility__img" src="images/room.jpg" alt="教室內部空間，中央立著鋼管，地上鋪著瑜伽墊，前方有鏡牆與布簾" />
   <div class="facility__scrim"></div>
   <div class="facility__content">
@@ -885,28 +1114,42 @@
   </div>
 </section>
 
-<section class="teacher" id="teacher">
+<section class="gallery reveal">
+  <div class="wrap">
+    <div class="gallery__head">
+      <div class="label">Moments</div>
+      <h2>課堂精彩時刻</h2>
+    </div>
+    <div class="gallery__grid">
+      <button type="button" class="gallery__item"><img src="images/pole-flowers.jpg" alt="鋼管舞者於花藝背景前展現柔軟度動作" /></button>
+      <button type="button" class="gallery__item"><img src="images/class-stretch-1.jpg" alt="三位學員在鋼管前互相協助伸展" /></button>
+      <button type="button" class="gallery__item"><img src="images/class-stretch-2.jpg" alt="學員們在鏡牆前進行柔軟度訓練" /></button>
+      <button type="button" class="gallery__item"><img src="images/class-stretch-3.jpg" alt="兩位學員在鋼管前擺出後彎雙人動作" /></button>
+      <button type="button" class="gallery__item"><img src="images/pole-action.jpg" alt="舞者在鋼管上做出後彎抬腿動作" /></button>
+    </div>
+  </div>
+</section>
+
+<section class="teacher reveal" id="teacher">
   <div class="wrap teacher__grid">
     <div class="teacher__portrait">
-      <img src="images/teacher-joann.jpg" alt="Joann Studio 主理教練高詠蓁（Joann）大頭照" />
+      <img src="images/teacher-joann.jpg" alt="Joann Studio 主理教練高詠蓁（Joann）於鋼管上展現後彎抬腿動作" />
     </div>
     <div>
       <div class="label">Meet The Coach</div>
       <h2>高詠蓁 Joann</h2>
       <div class="teacher__title">創辦人・主理教練</div>
-      <p>輔仁大學體育學系碩士在職專班，主修舞蹈。2019、2021 年世界啦啦隊錦標賽國家代表隊彩球團體組選手，現任新北市蘆洲國中、南山中學、漳和國中啦啦舞蹈社團指導教練，同時擔任中華民國競技啦啦隊協會技術教練，累積多年賽場與教學經驗。</p>
+      <p>輔仁大學體育學研究所、體育學系舞蹈專長學士。2019、2021 年世界啦啦隊錦標賽國家代表隊彩球團體組選手，現為新北市蘆洲國中、蘆洲國小、臺北市清江國小與南山中學舞蹈啦啦隊社團指導老師。</p>
       <ul class="teacher__badges">
-        <li>世界啦啦隊錦標賽 國手</li>
-        <li>啦啦舞蹈 B 級教練</li>
-        <li>啦啦舞蹈 C 級裁判</li>
-        <li>X-Pert 旋轉鋼管國際師資</li>
+        <li>啦啦舞蹈 A 級教練</li>
+        <li>啦啦舞蹈 B 級裁判</li>
       </ul>
-      <a class="teacher__ig" href="https://instagram.com/joannkao1008" target="_blank" rel="noopener">@joannkao1008</a>
+      <a class="teacher__ig" href="https://instagram.com/joann_4_fun" target="_blank" rel="noopener">@joann_4_fun</a>
     </div>
   </div>
 </section>
 
-<section class="schedule" id="schedule">
+<section class="schedule reveal" id="schedule">
   <div class="wrap">
     <div class="schedule__head">
       <div>
@@ -976,7 +1219,7 @@
   </div>
 </section>
 
-<section class="faq" id="faq">
+<section class="faq reveal" id="faq">
   <div class="wrap">
     <div class="faq__head">
       <div class="label">FAQ</div>
@@ -1007,7 +1250,7 @@
   </div>
 </section>
 
-<section class="info" id="contact">
+<section class="info reveal" id="contact">
   <div class="wrap">
     <div class="info__grid">
       <div class="info__block">
@@ -1036,6 +1279,11 @@
   </div>
 </section>
 
+<div class="lightbox" id="lightbox">
+  <button type="button" class="lightbox__close" aria-label="關閉">&times;</button>
+  <img class="lightbox__img" id="lightbox-img" src="" alt="" />
+</div>
+
 <script>
 (function(){
   var links = Array.prototype.slice.call(document.querySelectorAll('.nav__links a'));
@@ -1060,6 +1308,61 @@
   }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
 
   map.forEach(function(link, section){ observer.observe(section); });
+})();
+
+(function(){
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if(revealEls.length === 0) return;
+
+  if(!('IntersectionObserver' in window)){
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+    return;
+  }
+
+  var revealObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+  revealEls.forEach(function(el){ revealObserver.observe(el); });
+})();
+
+(function(){
+  var items = Array.prototype.slice.call(document.querySelectorAll('.gallery__item'));
+  var lightbox = document.getElementById('lightbox');
+  if(items.length === 0 || !lightbox) return;
+
+  var lightboxImg = document.getElementById('lightbox-img');
+  var closeBtn = lightbox.querySelector('.lightbox__close');
+
+  function open(src, alt){
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightbox.classList.add('is-open');
+  }
+  function close(){
+    lightbox.classList.remove('is-open');
+    lightboxImg.src = '';
+  }
+
+  items.forEach(function(item){
+    item.addEventListener('click', function(){
+      var img = item.querySelector('img');
+      if(img) open(img.src, img.alt);
+    });
+  });
+
+  closeBtn.addEventListener('click', close);
+  lightbox.addEventListener('click', function(e){
+    if(e.target === lightbox) close();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && lightbox.classList.contains('is-open')) close();
+  });
 })();
 </script>
 
