@@ -12,6 +12,77 @@
 <meta property="og:url" content="https://linbooaa.github.io/jonna-studio/joann-studio.html" />
 <meta property="og:image" content="https://linbooaa.github.io/jonna-studio/images/hero.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta property="og:locale" content="zh_TW" />
+<meta name="theme-color" content="#F1E9DA" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1B140D" media="(prefers-color-scheme: dark)" />
+<link rel="canonical" href="https://linbooaa.github.io/jonna-studio/joann-studio.html" />
+<link rel="icon" type="image/jpeg" href="images/logo.jpg" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ExerciseGym"],
+  "name": "Joann Studio",
+  "description": "Joann Studio 是台北市中正區的舞蹈工作室，提供舞蹈啦啦隊、鋼管、柔軟度、皮拉提斯、芭蕾等課程。近古亭站、台電大樓站，步行6分鐘。",
+  "url": "https://linbooaa.github.io/jonna-studio/joann-studio.html",
+  "image": "https://linbooaa.github.io/jonna-studio/images/hero.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "晉江街112巷2弄8號",
+    "addressLocality": "中正區",
+    "addressRegion": "台北市",
+    "addressCountry": "TW"
+  },
+  "sameAs": ["https://instagram.com/joann_4_fun"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "完全沒有舞蹈或運動基礎，可以報名嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。Joann Studio 強調零基礎友善、溫馨小班制，老師會依照每位學員狀況調整進度，不需要任何舞蹈或運動經驗就能開始。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "鋼管課需要準備什麼服裝？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "建議穿著短褲、背心等貼身服裝，避免長褲或太滑的布料影響抓握力；地面課程（柔軟度、皮拉提斯、成人芭蕾等）著舒適運動服即可。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "開課人數怎麼計算？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "鋼管、地面課程為 2 人開課、5 人滿班；兒童課程為 3 人開課、7 人滿班，實際是否開班會依報名人數而定，請留意課表公告。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "可以請假或臨時取消嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "請最晚於課程前一晚 21:00 前告知取消，逾時恕不予退課，詳細規則請以官方 LINE 公告為準。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "怎麼報名或諮詢課程？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "私訊官方 LINE（lin.ee/NjiyFML）即可完成課程諮詢與報名，也能詢問開幕優惠方案的詳細內容。"
+      }
+    }
+  ]
+}
+</script>
 <noscript><style>.reveal{opacity:1!important; transform:none!important;}</style></noscript>
 <style>
   :root{
@@ -114,6 +185,8 @@
     overflow-x:auto;
     scrollbar-width:none;
     -ms-overflow-style:none;
+    mask-image:linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
+    -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
   }
   .nav__links::-webkit-scrollbar{display:none;}
   .nav__links a{
@@ -535,6 +608,35 @@
   }
 
   /* ---------- GALLERY ---------- */
+  .pets{
+    padding:clamp(56px,9vw,100px) 0;
+    background:var(--bg-alt);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .pets__note{
+    margin:-8px 0 12px;
+    color:var(--ink-soft);
+    font-size:0.94rem;
+    max-width:62ch;
+  }
+  .pets__tips{
+    list-style:none; margin:0 0 clamp(28px,4vw,44px); padding:0;
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .pets__tips li{
+    font-size:0.94rem;
+    color:var(--ink-soft);
+    padding-left:14px;
+    position:relative;
+  }
+  .pets__tips li::before{
+    content:"";
+    position:absolute; left:0; top:0.6em;
+    width:5px; height:5px;
+    background:var(--accent);
+    border-radius:50%;
+  }
   .gallery{
     padding:clamp(56px,9vw,100px) 0;
     background:var(--bg);
@@ -566,8 +668,6 @@
   }
   .gallery__item:hover img{transform:scale(1.04);}
   .gallery__item:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
-  .gallery__item:first-child{grid-row:span 2;}
-  .gallery__item:first-child img{aspect-ratio:4/9;}
   @media (prefers-reduced-motion: reduce){
     .gallery__item:hover img{transform:none;}
   }
@@ -608,6 +708,23 @@
     cursor:pointer;
   }
   .lightbox__close:hover{background:rgba(255,255,255,0.18);}
+  .lightbox__prev,.lightbox__next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,0.35);
+    background:rgba(255,255,255,0.08);
+    color:#fff;
+    font-size:1.8rem;
+    line-height:1;
+    cursor:pointer;
+  }
+  .lightbox__prev:hover,.lightbox__next:hover{background:rgba(255,255,255,0.18);}
+  .lightbox__prev{left:clamp(8px,3vw,24px);}
+  .lightbox__next{right:clamp(8px,3vw,24px);}
 
   /* ---------- FACILITY BAND ---------- */
   .facility{
@@ -896,8 +1013,6 @@
     .teacher__badges{justify-content:center;}
     .pricing__grid{grid-template-columns:1fr;}
     .gallery__grid{grid-template-columns:repeat(2,1fr);}
-    .gallery__item:first-child{grid-row:span 1;}
-    .gallery__item:first-child img{aspect-ratio:4/5;}
     .info__grid{grid-template-columns:1fr; gap:32px;}
     .schedule__head{flex-direction:column; align-items:flex-start;}
     .schedule__note{text-align:left;}
@@ -912,6 +1027,8 @@
     <a href="#courses">課程</a>
     <a href="#promo">優惠</a>
     <a href="#pricing">價目</a>
+    <a href="#gallery">精彩時刻</a>
+    <a href="#pets">寵物</a>
     <a href="#teacher">師資</a>
     <a href="#schedule">課表</a>
     <a href="#faq">FAQ</a>
@@ -920,14 +1037,13 @@
 </nav>
 
 <section class="hero" id="top">
-  <img class="hero__img" src="images/hero.jpg" alt="Joann Studio 教室內牆面上的品牌標誌，鋼管前打著暖色聚光燈" />
+  <img class="hero__img" src="images/hero.jpg" alt="Joann Studio 教室內牆面上的品牌標誌，鋼管前打著暖色聚光燈" fetchpriority="high" />
   <div class="hero__scrim"></div>
   <div class="hero__content">
     <div class="hero__eyebrow">台北市中正區・舞蹈工作室</div>
     <h1 class="hero__title">Joann Studio</h1>
     <div class="hero__sub">Cheer · Pole · Movement</div>
     <div class="hero__meta">
-      <span>7.18 開幕茶會</span>
       <span>晉江街112巷2弄8號</span>
       <a class="btn" href="https://lin.ee/NjiyFML" target="_blank" rel="noopener">加入官方 LINE 諮詢報名</a>
     </div>
@@ -944,8 +1060,8 @@
       <div class="about__signoff">— Joann Studio</div>
     </div>
     <div class="about__portrait">
-      <img class="about__portrait-main" src="images/portrait.jpg" alt="舞者在鋼管上完成後彎跳躍動作，展現空中課程的訓練成果" />
-      <img class="about__portrait-detail" src="images/barre.jpg" alt="教室內的芭蕾把桿、Joann Studio 牆面標誌、爵士鞋與金色彩球" />
+      <img class="about__portrait-main" src="images/portrait.jpg" alt="舞者在鋼管上完成後彎跳躍動作，展現空中課程的訓練成果" loading="lazy" decoding="async" />
+      <img class="about__portrait-detail" src="images/barre.jpg" alt="教室內的芭蕾把桿、Joann Studio 牆面標誌、爵士鞋與金色彩球" loading="lazy" decoding="async" />
     </div>
   </div>
 </section>
@@ -1022,14 +1138,14 @@
       <strong>加購</strong>
       <div class="promo__addons">
         <div class="promo__addon">
-          <img src="images/addon-spray.jpg" alt="燥飛機噴霧產品照" />
+          <img src="images/addon-spray.jpg" alt="燥飛機噴霧產品照" loading="lazy" decoding="async" />
           <div>
             <div class="promo__addon-name">燥飛機</div>
             <div class="promo__addon-price">$550</div>
           </div>
         </div>
         <div class="promo__addon">
-          <img src="images/addon-cream.jpg" alt="泰迪卡卡乳霜產品照" />
+          <img src="images/addon-cream.jpg" alt="泰迪卡卡乳霜產品照" loading="lazy" decoding="async" />
           <div>
             <div class="promo__addon-name">泰迪卡卡</div>
             <div class="promo__addon-price">$450</div>
@@ -1039,7 +1155,7 @@
       <strong class="promo__extra-heading">加贈</strong>
       <div class="promo__addons">
         <div class="promo__addon">
-          <img src="images/promo-socks.jpg" alt="訂製襪子產品照，一黑一白兩雙" />
+          <img src="images/promo-socks.jpg" alt="訂製襪子產品照，一黑一白兩雙" loading="lazy" decoding="async" />
           <div>
             <div class="promo__addon-name">訂製襪子一組</div>
           </div>
@@ -1105,7 +1221,7 @@
 </section>
 
 <section class="facility reveal">
-  <img class="facility__img" src="images/room.jpg" alt="教室內部空間，中央立著鋼管，地上鋪著瑜伽墊，前方有鏡牆與布簾" />
+  <img class="facility__img" src="images/room.jpg" alt="教室內部空間，中央立著鋼管，地上鋪著瑜伽墊，前方有鏡牆與布簾" loading="lazy" decoding="async" />
   <div class="facility__scrim"></div>
   <div class="facility__content">
     <div class="label">The Studio</div>
@@ -1114,18 +1230,39 @@
   </div>
 </section>
 
-<section class="gallery reveal">
+<section class="gallery reveal" id="gallery">
   <div class="wrap">
     <div class="gallery__head">
       <div class="label">Moments</div>
       <h2>課堂精彩時刻</h2>
     </div>
     <div class="gallery__grid">
-      <button type="button" class="gallery__item"><img src="images/pole-flowers.jpg" alt="鋼管舞者於花藝背景前展現柔軟度動作" /></button>
-      <button type="button" class="gallery__item"><img src="images/class-stretch-1.jpg" alt="三位學員在鋼管前互相協助伸展" /></button>
-      <button type="button" class="gallery__item"><img src="images/class-stretch-2.jpg" alt="學員們在鏡牆前進行柔軟度訓練" /></button>
-      <button type="button" class="gallery__item"><img src="images/class-stretch-3.jpg" alt="兩位學員在鋼管前擺出後彎雙人動作" /></button>
-      <button type="button" class="gallery__item"><img src="images/pole-action.jpg" alt="舞者在鋼管上做出後彎抬腿動作" /></button>
+      <button type="button" class="gallery__item"><img src="images/class-stretch-1.jpg" alt="三位學員在鋼管前互相協助伸展" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/class-stretch-2.jpg" alt="學員們在鏡牆前進行柔軟度訓練" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/class-stretch-3.jpg" alt="兩位學員在鋼管前擺出後彎雙人動作" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/class-stretch-4.jpg" alt="三位學員在教室內以人橋姿勢互相協力伸展" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/class-stretch-5.jpg" alt="三位學員在教室內接力擺出後彎伸展動作" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/class-stretch-6.jpg" alt="多位學員在鋼管前使用瑜伽磚進行髖關節伸展訓練" loading="lazy" decoding="async" /></button>
+    </div>
+  </div>
+</section>
+
+<section class="pets reveal" id="pets">
+  <div class="wrap">
+    <div class="gallery__head">
+      <div class="label">Pet Friendly</div>
+      <h2>寵物專區</h2>
+    </div>
+    <p class="pets__note">歡迎帶著毛孩一起來上課或旁觀！</p>
+    <ul class="pets__tips">
+      <li>提前跟我們說一聲，讓教練知道當天有毛孩同行</li>
+      <li>記得自備尿布或尿墊，避免弄髒教室</li>
+    </ul>
+    <div class="gallery__grid">
+      <button type="button" class="gallery__item"><img src="images/pet-1.jpg" alt="學員在鋼管上抱著寵物犬做出後彎動作" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/pet-2.jpg" alt="學員坐在鋼管底座上抱著穿衣服的貴賓犬" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/pet-3.jpg" alt="學員在教室內與穿條紋衣的貴賓犬互動" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/pet-4.jpg" alt="學員抱著穿衣服的貴賓犬特寫" loading="lazy" decoding="async" /></button>
     </div>
   </div>
 </section>
@@ -1133,16 +1270,17 @@
 <section class="teacher reveal" id="teacher">
   <div class="wrap teacher__grid">
     <div class="teacher__portrait">
-      <img src="images/teacher-joann.jpg" alt="Joann Studio 主理教練高詠蓁（Joann）於鋼管上展現後彎抬腿動作" />
+      <img src="images/teacher-joann.jpg" alt="Joann Studio 主理教練高詠蓁（Joann）於鋼管上展現後彎抬腿動作" loading="lazy" decoding="async" />
     </div>
     <div>
       <div class="label">Meet The Coach</div>
       <h2>高詠蓁 Joann</h2>
       <div class="teacher__title">創辦人・主理教練</div>
-      <p>輔仁大學體育學研究所、體育學系舞蹈專長學士。2019、2021 年世界啦啦隊錦標賽國家代表隊彩球團體組選手，現為新北市蘆洲國中、蘆洲國小、臺北市清江國小與南山中學舞蹈啦啦隊社團指導老師。</p>
+      <p>輔仁大學體育學系碩士、體育學系舞蹈專長學士。2019、2021 年世界啦啦隊錦標賽國家代表隊彩球團體組選手，現為新北市蘆洲國中、蘆洲國小、臺北市清江國小與南山中學舞蹈啦啦隊社團指導老師。</p>
       <ul class="teacher__badges">
         <li>啦啦舞蹈 A 級教練</li>
         <li>啦啦舞蹈 B 級裁判</li>
+        <li>X-pert旋轉管國際師資合格證</li>
       </ul>
       <a class="teacher__ig" href="https://instagram.com/joann_4_fun" target="_blank" rel="noopener">@joann_4_fun</a>
     </div>
@@ -1271,7 +1409,7 @@
     </div>
     <div class="footer">
       <div class="footer__brand">
-        <img src="images/logo.jpg" alt="Joann Studio 圓形品牌標誌" />
+        <img src="images/logo.jpg" alt="Joann Studio 圓形品牌標誌" loading="lazy" decoding="async" />
         <span>Joann Studio</span>
       </div>
       <small>Cheer · Pole · Movement — 台北市中正區晉江街112巷2弄8號</small>
@@ -1281,7 +1419,9 @@
 
 <div class="lightbox" id="lightbox">
   <button type="button" class="lightbox__close" aria-label="關閉">&times;</button>
+  <button type="button" class="lightbox__prev" aria-label="上一張">&lsaquo;</button>
   <img class="lightbox__img" id="lightbox-img" src="" alt="" />
+  <button type="button" class="lightbox__next" aria-label="下一張">&rsaquo;</button>
 </div>
 
 <script>
@@ -1338,10 +1478,19 @@
 
   var lightboxImg = document.getElementById('lightbox-img');
   var closeBtn = lightbox.querySelector('.lightbox__close');
+  var prevBtn = lightbox.querySelector('.lightbox__prev');
+  var nextBtn = lightbox.querySelector('.lightbox__next');
+  var currentIndex = 0;
 
-  function open(src, alt){
-    lightboxImg.src = src;
-    lightboxImg.alt = alt || '';
+  function show(index){
+    currentIndex = (index + items.length) % items.length;
+    var img = items[currentIndex].querySelector('img');
+    if(!img) return;
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt || '';
+  }
+  function open(index){
+    show(index);
     lightbox.classList.add('is-open');
   }
   function close(){
@@ -1349,19 +1498,21 @@
     lightboxImg.src = '';
   }
 
-  items.forEach(function(item){
-    item.addEventListener('click', function(){
-      var img = item.querySelector('img');
-      if(img) open(img.src, img.alt);
-    });
+  items.forEach(function(item, index){
+    item.addEventListener('click', function(){ open(index); });
   });
 
   closeBtn.addEventListener('click', close);
+  prevBtn.addEventListener('click', function(){ show(currentIndex - 1); });
+  nextBtn.addEventListener('click', function(){ show(currentIndex + 1); });
   lightbox.addEventListener('click', function(e){
     if(e.target === lightbox) close();
   });
   document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape' && lightbox.classList.contains('is-open')) close();
+    if(!lightbox.classList.contains('is-open')) return;
+    if(e.key === 'Escape') close();
+    if(e.key === 'ArrowLeft') show(currentIndex - 1);
+    if(e.key === 'ArrowRight') show(currentIndex + 1);
   });
 })();
 </script>

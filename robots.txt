@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://linbooaa.github.io/jonna-studio/sitemap.xml
