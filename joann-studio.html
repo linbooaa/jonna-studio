@@ -11,12 +11,18 @@
 <meta property="og:description" content="台北市中正區舞蹈工作室，提供舞蹈啦啦隊、鋼管、柔軟度、皮拉提斯、芭蕾等課程。近古亭站、台電大樓站，步行6分鐘。" />
 <meta property="og:url" content="https://linbooaa.github.io/jonna-studio/joann-studio.html" />
 <meta property="og:image" content="https://linbooaa.github.io/jonna-studio/images/hero.jpg" />
+<meta property="og:image:width" content="1099" />
+<meta property="og:image:height" content="1581" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="og:locale" content="zh_TW" />
 <meta name="theme-color" content="#F1E9DA" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#1B140D" media="(prefers-color-scheme: dark)" />
 <link rel="canonical" href="https://linbooaa.github.io/jonna-studio/joann-studio.html" />
 <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&display=swap" rel="stylesheet" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -86,6 +92,7 @@
 <noscript><style>.reveal{opacity:1!important; transform:none!important;}</style></noscript>
 <style>
   :root{
+    --font-heading:Georgia,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
     --bg:#F1E9DA;
     --bg-alt:#E7DBC4;
     --card:#FBF7EE;
@@ -141,7 +148,7 @@
   img{max-width:100%;display:block;}
   a{color:inherit;}
   h1,h2,h3{
-    font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+    font-family:var(--font-heading);
     font-weight:400;
     text-wrap:balance;
     margin:0;
@@ -172,7 +179,7 @@
     box-shadow:var(--shadow);
   }
   .nav__brand{
-    font-family:Georgia,serif;
+    font-family:var(--font-heading);
     font-size:1.05rem;
     letter-spacing:0.03em;
     color:var(--ink);
@@ -351,7 +358,7 @@
   .about p + p{margin-top:14px;}
   .about__signoff{
     margin-top:26px;
-    font-family:Georgia,"Iowan Old Style",serif;
+    font-family:var(--font-heading);
     font-style:italic;
     color:var(--accent);
     font-size:1.05rem;
@@ -386,7 +393,7 @@
     box-shadow:var(--shadow);
   }
   .pillar__num{
-    font-family:Georgia,serif;
+    font-family:var(--font-heading);
     font-size:0.85rem;
     color:var(--accent-soft);
     letter-spacing:0.08em;
@@ -475,7 +482,7 @@
     align-items:baseline;
     gap:10px;
     margin-top:10px;
-    font-family:Georgia,serif;
+    font-family:var(--font-heading);
     font-size:1.9rem;
     color:var(--accent);
   }
@@ -498,7 +505,7 @@
   }
   .promo__extra > strong{
     display:block;
-    font-family:Georgia,serif;
+    font-family:var(--font-heading);
     color:var(--accent);
     font-weight:400;
     font-size:1rem;
@@ -595,7 +602,7 @@
     font-size:0.9rem;
   }
   .pricing__extra strong{
-    font-family:Georgia,serif;
+    font-family:var(--font-heading);
     color:var(--accent);
     font-weight:400;
   }
@@ -858,7 +865,7 @@
     border:1px solid var(--stage-line);
   }
   .day__name{
-    font-family:Georgia,serif;
+    font-family:var(--font-heading);
     font-size:1.15rem;
   }
   .day__dates{
@@ -885,7 +892,7 @@
   .day__cancel{
     font-size:0.76rem;
     color:var(--stage-ink);
-    opacity:0.55;
+    opacity:0.75;
     font-variant-numeric:tabular-nums;
   }
   .schedule__special{
@@ -901,7 +908,7 @@
     font-size:0.9rem;
   }
   .schedule__special strong{
-    font-family:Georgia,serif;
+    font-family:var(--font-heading);
     color:var(--accent-soft);
     font-weight:400;
   }
@@ -925,7 +932,7 @@
   .faq__q{
     display:flex;
     gap:10px;
-    font-family:Georgia,serif;
+    font-family:var(--font-heading);
     font-size:1.05rem;
     color:var(--ink);
   }
@@ -991,7 +998,7 @@
     border:1px solid var(--line);
   }
   .footer__brand span{
-    font-family:Georgia,serif;
+    font-family:var(--font-heading);
     font-size:1rem;
     letter-spacing:0.04em;
   }
@@ -1017,9 +1024,27 @@
     .schedule__head{flex-direction:column; align-items:flex-start;}
     .schedule__note{text-align:left;}
   }
+
+  .skip-link{
+    position:absolute;
+    top:-48px;
+    left:12px;
+    z-index:200;
+    padding:10px 18px;
+    border-radius:8px;
+    background:var(--accent);
+    color:#fff8ec;
+    font-size:0.9rem;
+    font-weight:600;
+    text-decoration:none;
+    transition:top 0.2s ease;
+  }
+  .skip-link:focus{top:12px;}
 </style>
 </head>
 <body>
+
+<a class="skip-link" href="#top">跳到主內容</a>
 
 <nav class="nav">
   <a class="nav__brand" href="#top">Joann Studio</a>
@@ -1036,8 +1061,8 @@
   </div>
 </nav>
 
-<section class="hero" id="top">
-  <img class="hero__img" src="images/hero.jpg" alt="Joann Studio 教室內牆面上的品牌標誌，鋼管前打著暖色聚光燈" fetchpriority="high" />
+<section class="hero" id="top" tabindex="-1">
+  <img class="hero__img" src="images/hero.jpg" alt="Joann Studio 教室內牆面上的品牌標誌，鋼管前打著暖色聚光燈" width="1099" height="1581" fetchpriority="high" />
   <div class="hero__scrim"></div>
   <div class="hero__content">
     <div class="hero__eyebrow">台北市中正區・舞蹈工作室</div>
@@ -1060,8 +1085,8 @@
       <div class="about__signoff">— Joann Studio</div>
     </div>
     <div class="about__portrait">
-      <img class="about__portrait-main" src="images/portrait.jpg" alt="舞者在鋼管上完成後彎跳躍動作，展現空中課程的訓練成果" loading="lazy" decoding="async" />
-      <img class="about__portrait-detail" src="images/barre.jpg" alt="教室內的芭蕾把桿、Joann Studio 牆面標誌、爵士鞋與金色彩球" loading="lazy" decoding="async" />
+      <img class="about__portrait-main" src="images/portrait.jpg" alt="舞者在鋼管上完成後彎跳躍動作，展現空中課程的訓練成果" width="700" height="701" loading="lazy" decoding="async" />
+      <img class="about__portrait-detail" src="images/barre.jpg" alt="教室內的芭蕾把桿、Joann Studio 牆面標誌、爵士鞋與金色彩球" width="1100" height="1213" loading="lazy" decoding="async" />
     </div>
   </div>
 </section>
@@ -1124,28 +1149,28 @@
         <span class="promo__tag">方案一</span>
         <h3>小孩才做選擇</h3>
         <div class="promo__price">$5,000 <span>地面 5 堂＋空中 5 堂</span></div>
-        <div class="promo__deadline">限個人使用至 2027/7/31</div>
+        <div class="promo__deadline">限個人使用至 2026/7/31</div>
       </div>
       <div class="promo__card">
         <span class="promo__tag">方案二</span>
         <h3>單人上飽飽，雙人剛剛好</h3>
         <div class="promo__price">$12,000 <span>地面 30 堂・平均 $400</span></div>
         <div class="promo__price">$16,800 <span>空中 30 堂・平均 $560</span></div>
-        <div class="promo__deadline">最多雙人共享使用至 2027/7/31</div>
+        <div class="promo__deadline">最多雙人共享使用至 2026/7/31</div>
       </div>
     </div>
     <div class="promo__extra">
       <strong>加購</strong>
       <div class="promo__addons">
         <div class="promo__addon">
-          <img src="images/addon-spray.jpg" alt="燥飛機噴霧產品照" loading="lazy" decoding="async" />
+          <img src="images/addon-spray.jpg" alt="燥飛機噴霧產品照" width="400" height="620" loading="lazy" decoding="async" />
           <div>
             <div class="promo__addon-name">燥飛機</div>
             <div class="promo__addon-price">$550</div>
           </div>
         </div>
         <div class="promo__addon">
-          <img src="images/addon-cream.jpg" alt="泰迪卡卡乳霜產品照" loading="lazy" decoding="async" />
+          <img src="images/addon-cream.jpg" alt="泰迪卡卡乳霜產品照" width="400" height="620" loading="lazy" decoding="async" />
           <div>
             <div class="promo__addon-name">泰迪卡卡</div>
             <div class="promo__addon-price">$450</div>
@@ -1155,7 +1180,7 @@
       <strong class="promo__extra-heading">加贈</strong>
       <div class="promo__addons">
         <div class="promo__addon">
-          <img src="images/promo-socks.jpg" alt="訂製襪子產品照，一黑一白兩雙" loading="lazy" decoding="async" />
+          <img src="images/promo-socks.jpg" alt="訂製襪子產品照，一黑一白兩雙" width="300" height="260" loading="lazy" decoding="async" />
           <div>
             <div class="promo__addon-name">訂製襪子一組</div>
           </div>
@@ -1221,7 +1246,7 @@
 </section>
 
 <section class="facility reveal">
-  <img class="facility__img" src="images/room.jpg" alt="教室內部空間，中央立著鋼管，地上鋪著瑜伽墊，前方有鏡牆與布簾" loading="lazy" decoding="async" />
+  <img class="facility__img" src="images/room.jpg" alt="教室內部空間，中央立著鋼管，地上鋪著瑜伽墊，前方有鏡牆與布簾" width="1100" height="1422" loading="lazy" decoding="async" />
   <div class="facility__scrim"></div>
   <div class="facility__content">
     <div class="label">The Studio</div>
@@ -1237,12 +1262,12 @@
       <h2>課堂精彩時刻</h2>
     </div>
     <div class="gallery__grid">
-      <button type="button" class="gallery__item"><img src="images/class-stretch-1.jpg" alt="三位學員在鋼管前互相協助伸展" loading="lazy" decoding="async" /></button>
-      <button type="button" class="gallery__item"><img src="images/class-stretch-2.jpg" alt="學員們在鏡牆前進行柔軟度訓練" loading="lazy" decoding="async" /></button>
-      <button type="button" class="gallery__item"><img src="images/class-stretch-3.jpg" alt="兩位學員在鋼管前擺出後彎雙人動作" loading="lazy" decoding="async" /></button>
-      <button type="button" class="gallery__item"><img src="images/class-stretch-4.jpg" alt="三位學員在教室內以人橋姿勢互相協力伸展" loading="lazy" decoding="async" /></button>
-      <button type="button" class="gallery__item"><img src="images/class-stretch-5.jpg" alt="三位學員在教室內接力擺出後彎伸展動作" loading="lazy" decoding="async" /></button>
-      <button type="button" class="gallery__item"><img src="images/class-stretch-6.jpg" alt="多位學員在鋼管前使用瑜伽磚進行髖關節伸展訓練" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/class-stretch-1.jpg" alt="三位學員在鋼管前互相協助伸展" width="867" height="1502" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/class-stretch-2.jpg" alt="學員們在鏡牆前進行柔軟度訓練" width="994" height="1648" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/class-stretch-3.jpg" alt="兩位學員在鋼管前擺出後彎雙人動作" width="868" height="1489" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/class-stretch-4.jpg" alt="三位學員在教室內以人橋姿勢互相協力伸展" width="868" height="1392" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/class-stretch-5.jpg" alt="三位學員在教室內接力擺出後彎伸展動作" width="978" height="1674" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/class-stretch-6.jpg" alt="多位學員在鋼管前使用瑜伽磚進行髖關節伸展訓練" width="1206" height="2070" loading="lazy" decoding="async" /></button>
     </div>
   </div>
 </section>
@@ -1259,10 +1284,10 @@
       <li>記得自備尿布或尿墊，避免弄髒教室</li>
     </ul>
     <div class="gallery__grid">
-      <button type="button" class="gallery__item"><img src="images/pet-1.jpg" alt="學員在鋼管上抱著寵物犬做出後彎動作" loading="lazy" decoding="async" /></button>
-      <button type="button" class="gallery__item"><img src="images/pet-2.jpg" alt="學員坐在鋼管底座上抱著穿衣服的貴賓犬" loading="lazy" decoding="async" /></button>
-      <button type="button" class="gallery__item"><img src="images/pet-3.jpg" alt="學員在教室內與穿條紋衣的貴賓犬互動" loading="lazy" decoding="async" /></button>
-      <button type="button" class="gallery__item"><img src="images/pet-4.jpg" alt="學員抱著穿衣服的貴賓犬特寫" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/pet-1.jpg" alt="學員在鋼管上抱著寵物犬做出後彎動作" width="1206" height="2001" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/pet-2.jpg" alt="學員坐在鋼管底座上抱著穿衣服的貴賓犬" width="1206" height="2135" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/pet-3.jpg" alt="學員在教室內與穿條紋衣的貴賓犬互動" width="1206" height="2099" loading="lazy" decoding="async" /></button>
+      <button type="button" class="gallery__item"><img src="images/pet-4.jpg" alt="學員抱著穿衣服的貴賓犬特寫" width="900" height="1199" loading="lazy" decoding="async" /></button>
     </div>
   </div>
 </section>
@@ -1270,7 +1295,7 @@
 <section class="teacher reveal" id="teacher">
   <div class="wrap teacher__grid">
     <div class="teacher__portrait">
-      <img src="images/teacher-joann.jpg" alt="Joann Studio 主理教練高詠蓁（Joann）於鋼管上展現後彎抬腿動作" loading="lazy" decoding="async" />
+      <img src="images/teacher-joann.jpg" alt="Joann Studio 主理教練高詠蓁（Joann）於鋼管上展現後彎抬腿動作" width="249" height="249" loading="lazy" decoding="async" />
     </div>
     <div>
       <div class="label">Meet The Coach</div>
@@ -1409,7 +1434,7 @@
     </div>
     <div class="footer">
       <div class="footer__brand">
-        <img src="images/logo.jpg" alt="Joann Studio 圓形品牌標誌" loading="lazy" decoding="async" />
+        <img src="images/logo.jpg" alt="Joann Studio 圓形品牌標誌" width="500" height="479" loading="lazy" decoding="async" />
         <span>Joann Studio</span>
       </div>
       <small>Cheer · Pole · Movement — 台北市中正區晉江街112巷2弄8號</small>
@@ -1441,8 +1466,9 @@
       var link = map.get(entry.target);
       if(!link) return;
       if(entry.isIntersecting){
-        links.forEach(function(l){ l.classList.remove('active'); });
+        links.forEach(function(l){ l.classList.remove('active'); l.removeAttribute('aria-current'); });
         link.classList.add('active');
+        link.setAttribute('aria-current', 'true');
       }
     });
   }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
@@ -1481,6 +1507,8 @@
   var prevBtn = lightbox.querySelector('.lightbox__prev');
   var nextBtn = lightbox.querySelector('.lightbox__next');
   var currentIndex = 0;
+  var lastTrigger = null;
+  var focusable = [prevBtn, nextBtn, closeBtn];
 
   function show(index){
     currentIndex = (index + items.length) % items.length;
@@ -1489,17 +1517,20 @@
     lightboxImg.src = img.src;
     lightboxImg.alt = img.alt || '';
   }
-  function open(index){
+  function open(index, trigger){
+    lastTrigger = trigger || null;
     show(index);
     lightbox.classList.add('is-open');
+    closeBtn.focus();
   }
   function close(){
     lightbox.classList.remove('is-open');
     lightboxImg.src = '';
+    if(lastTrigger) lastTrigger.focus();
   }
 
   items.forEach(function(item, index){
-    item.addEventListener('click', function(){ open(index); });
+    item.addEventListener('click', function(){ open(index, item); });
   });
 
   closeBtn.addEventListener('click', close);
@@ -1513,6 +1544,14 @@
     if(e.key === 'Escape') close();
     if(e.key === 'ArrowLeft') show(currentIndex - 1);
     if(e.key === 'ArrowRight') show(currentIndex + 1);
+    if(e.key === 'Tab'){
+      var idx = focusable.indexOf(document.activeElement);
+      e.preventDefault();
+      var next = e.shiftKey
+        ? focusable[(idx <= 0 ? focusable.length : idx) - 1]
+        : focusable[(idx + 1) % focusable.length];
+      next.focus();
+    }
   });
 })();
 </script>
